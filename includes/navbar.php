@@ -11,5 +11,5 @@
                         <li><a href="">Account</a></li>
                     </ul>
                 </nav>
-                <img src="./images/cart.png" width="40px" />
+                <img src="./static/images/cart.png" width="40px" />
             </div>
