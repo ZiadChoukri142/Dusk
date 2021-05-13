@@ -1,6 +1,6 @@
 <div class="navbar">
                 <div class="logo">
-                    <img src="./images/brand.png" width="130px" />
+                    <img src="./static/images/brand.png" width="130px" />
                 </div>
                 <nav>
                     <ul>
