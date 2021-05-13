@@ -1,9 +1,13 @@
+/* ------ STYLE RESET ------ */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+
+/* ------ HEADER ------ */
 
 .header{
     background: rgb(255,255,255);
@@ -40,6 +44,8 @@ a{
 a.active{
     font-weight: bold;
 }
+
+/* ------ BANNER ------ */
 
 p{
     color: #080808;
@@ -95,6 +101,7 @@ p.text{
     background: #33174E;
 }
 
+/* ------ CATEGORIES ------ */
 
 .categories{
     margin: 70px 0;
@@ -115,6 +122,8 @@ p.text{
     margin: auto;
     padding: 25px;
 }
+
+/* ------ PRODUCTS ------ */
 
 .col-4{
     flex-basis: 25%;
@@ -169,6 +178,8 @@ h4{
     transform: translateY(-5px);
 }
 
+/* ------ EXCLUSIVE OFFER ------ */
+
 .offer{
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(80,48,64,1) 250%);
@@ -179,6 +190,8 @@ h4{
 .col-2 .offer-image{
     padding: 50px;
 }
+
+/* ------ FOOTER ------ */
 
 style.cssCSS
 body {
