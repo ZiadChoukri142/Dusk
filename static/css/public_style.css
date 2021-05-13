@@ -197,6 +197,12 @@ h4{
 	padding-top: 100px;
 }
 
+.testimonial .col-3 p{
+	opacity: 70%;
+	color: #292c2f;
+	padding: 15px;
+}
+
 .testimonial .col-3{
 	text-align: center;
 	padding: 40px 20px;
