@@ -56,11 +56,6 @@ p.text{
     opacity: 70%;
 }
 
-p.testimonial{
-	color: #1D1D1D;
-	font-size: 16px;
-}
-
 .container{
     max-width: 1300px;
     margin: auto;
