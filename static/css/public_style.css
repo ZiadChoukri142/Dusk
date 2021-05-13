@@ -191,6 +191,23 @@ h4{
     padding: 50px;
 }
 
+/* ------ TESTIMONIALS ------ */
+
+.testimonial{
+	padding-top: 100px;
+}
+
+.testimonial .col-3{
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.testimonial .col-3 img{
+	width: 50px;
+	margin-top: 20px;
+	border-radius: 50%;
+}
+
 /* ------ FOOTER ------ */
 
 style.cssCSS
