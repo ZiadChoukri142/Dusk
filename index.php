@@ -216,7 +216,8 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
-                <p class="testimonial">
+                <i class="fas fa-quote-left"></i>
+                <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                 </p>
@@ -227,6 +228,40 @@
                     <i class="fas fa-star-half-alt"></i>
                     <i class="far fa-star"></i>
                 </div>
+                <img src="./static/images/user-1.png">
+                <h3>Jackie James</h3>
+                </div>
+                <div class="col-3">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="./static/images/user-2.png">
+                <h3>Charlie Doe</h3>
+                </div>
+                <div class="col-3">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <img src="./static/images/user-3.png">
+                <h3>Maria Saint</h3>
                 </div>
             </div>
         </div>
