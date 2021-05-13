@@ -20,7 +20,7 @@
                     <a href="" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <img src="./images/image1.png" />
+                    <img src="./static/images/image1.png" />
                 </div>
             </div>
         </div>
@@ -29,13 +29,13 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
-                    <img src="./images/category-1.jpg" />
+                    <img src="./static/images/category-1.jpg" />
                 </div>
                 <div class="col-3">
-                    <img src="./images/category-2.jpg" />
+                    <img src="./static/images/category-2.jpg" />
                 </div>
                 <div class="col-3">
-                    <img src="./images/category-3.jpg" />
+                    <img src="./static/images/category-3.jpg" />
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <h2 class="title">Featured Products</h2>
         <div class="row">
             <div class="col-4">
-                <img src="./images/product-1.jpg">
+                <img src="./static/images/product-1.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -56,7 +56,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-2.jpg">
+                <img src="./static/images/product-2.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -68,7 +68,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-3.jpg">
+                <img src="./static/images/product-3.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -80,7 +80,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-4.jpg">
+                <img src="./static/images/product-4.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -95,7 +95,7 @@
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
-                <img src="./images/product-5.jpg">
+                <img src="./static/images/product-5.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -107,7 +107,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-6.jpg">
+                <img src="./static/images/product-6.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -119,7 +119,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-7.jpg">
+                <img src="./static/images/product-7.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -131,7 +131,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-8.jpg">
+                <img src="./static/images/product-8.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -145,7 +145,7 @@
         </div>
         <div class="row">
             <div class="col-4">
-                <img src="./images/product-9.jpg">
+                <img src="./static/images/product-9.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -157,7 +157,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-10.jpg">
+                <img src="./static/images/product-10.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -169,7 +169,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-11.jpg">
+                <img src="./static/images/product-11.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -181,7 +181,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <img src="./images/product-12.jpg">
+                <img src="./static/images/product-12.jpg">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <i class="fas fa-star"></i>
@@ -198,7 +198,7 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-2">
-                    <img src="./images/exclusive.png" class="offer-image">
+                    <img src="./static/images/exclusive.png" class="offer-image">
                 </div>
                 <div class="col-2">
                     <p>Exclusifly Available on Dusk!</p>
