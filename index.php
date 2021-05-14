@@ -299,6 +299,29 @@
 
     <!-- Testimonial -->
 
+    <!-- Brands -->
+       <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="./static/images/logo-godrej.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="./static/images/logo-oppo.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="./static/images/logo-coca-cola.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="./static/images/logo-paypal.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="./static/images/logo-philips.png">
+                    </div>
+                </div>
+            </div>
+       </div>
+    <!-- Brands -->
     <!-- Footer -->
   
     <?php include_once('./includes/footer.php'); ?>
