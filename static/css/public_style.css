@@ -233,6 +233,22 @@ h4{
 	font-size: 34px;
 	color: #33174E;
 }
+
+/* ------ BRANDS ------ */
+
+.brands{
+	margin: 100px auto;
+}
+
+.col-5{
+	width: 160px;
+}
+
+.col-5 img{
+	width: 100%;
+	cursor: pointer;
+}
+
 /* ------ FOOTER ------ */
 
 style.cssCSS
