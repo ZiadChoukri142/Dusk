@@ -1,10 +1,17 @@
-<?php include_once('./includes/header.php'); ?>
+       
+    <!-- Header -->
+        <?php include_once('./includes/header.php'); ?>
+    <!-- Header -->
 
 <body>
     <div class="header">
         <div class="container">
-            <!-- Navbar -->
-            <?php include_once('./includes/navbar.php'); ?>
+
+    <!-- Navbar -->
+        <?php include_once('./includes/navbar.php'); ?>
+    <!-- Navbar -->
+
+    <!-- Banner -->
 
             <div class="row">
                 <div class="col-2">
@@ -23,8 +30,14 @@
                     <img src="./static/images/image1.png" />
                 </div>
             </div>
+
+            <!-- Banner -->
+
         </div>
     </div>
+
+    <!-- Categories -->
+
     <div class="categories">
         <div class="small-container">
             <div class="row">
@@ -40,6 +53,10 @@
             </div>
         </div>
     </div>
+    <!-- Categories -->
+
+    <!-- Featured -->
+
     <div class="small-container">
         <h2 class="title">Featured Products</h2>
         <div class="row">
@@ -92,6 +109,10 @@
                 <p>$50.00</p>
             </div>
         </div>
+
+        <!-- Featured -->
+
+        <!-- Latest -->
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
@@ -194,6 +215,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Latest -->
+
+    <!-- Special Offer -->
+
     <div class="offer">
         <div class="small-container">
             <div class="row">
@@ -211,7 +237,11 @@
             </div>
         </div>
     </div>
-<!-- testimonial -->
+
+    <!-- Special Offer -->
+
+    <!-- Testimonial -->
+
     <div class="testimonial">
         <div class="small-container">
             <div class="row">
@@ -266,5 +296,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Testimonial -->
+
+    <!-- Footer -->
+  
     <?php include_once('./includes/footer.php'); ?>
+    
+    <!-- Footer -->
 </body>
