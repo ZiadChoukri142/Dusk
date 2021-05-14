@@ -218,7 +218,7 @@
 
     <!-- Latest -->
 
-    <!-- Special Offer -->
+    <!-- Exclusive Offer -->
 
     <div class="offer">
         <div class="small-container">
@@ -238,7 +238,7 @@
         </div>
     </div>
 
-    <!-- Special Offer -->
+    <!-- Exclusive Offer -->
 
     <!-- Testimonial -->
 
