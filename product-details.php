@@ -57,7 +57,18 @@
 
     <!-- Single Product Details -->
 
-    <!-- Featured -->
+    <!-- Title -->
+
+       <div class="small-container">
+           <div class="row row-2">
+                <h2>Related Products</h2>
+                <p>View More</p>
+           </div>
+       </div>
+
+    <!-- Title -->
+
+    <!-- Related Products -->
 
     <div class="small-container">
         <div class="row">
@@ -111,7 +122,7 @@
             </div>
         </div>
     </div>
-    <!-- Featured -->
+    <!-- Related Products -->
 
     <!-- Footer -->
        
