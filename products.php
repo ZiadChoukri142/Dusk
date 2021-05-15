@@ -15,7 +15,7 @@
     <!-- Featured -->
 
     <div class="small-container">
-        <div class="row">
+        <div class="row row-2">
             <h2>All Products</h2>
             <select>
                 <option>Default Sorting</option>
@@ -74,6 +74,13 @@
                 </div>
                 <p>$50.00</p>
             </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
         </div>
     </div>
     <!-- Featured -->
