@@ -8,7 +8,7 @@
         <a href="#">Contact</a> <br>
         <a href="#">Account</a>
     </p>
-    <p class="footer-company-name">webdevtrick &copy; 2019</p>
+    <p class="footer-company-name">Dusk &copy; 2021</p>
 </div>
 <div class="footer-center">
     <img src="./static/images/brand.png">
