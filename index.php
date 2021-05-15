@@ -331,7 +331,9 @@
     <!-- Footer -->
 
     <!-- Scripts -->
-    
+
+       <!-- Burger Menu -->
+
        <script>
            var MenuItems = document.getElementById("MenuItems");
 
@@ -349,6 +351,8 @@
            }
        </script>
 
+       <!-- Burger Menu -->
+       
     <!-- Scripts -->
 
 </body>
