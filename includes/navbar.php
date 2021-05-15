@@ -12,4 +12,5 @@
                     </ul>
                 </nav>
                 <img src="./static/images/cart.png" width="40px" />
+                <img src="./static/images/menu.png" class="menu-icon" />
             </div>
