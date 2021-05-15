@@ -17,19 +17,19 @@
        <div class="small-container single-product">
            <div class="row">
                <div class="col-2">
-                   <img src="./static/images/gallery-1.jpg" width="100%">
+                   <img src="./static/images/gallery-1.jpg" width="100%" id="productImg">
                     <div class="small-img-row">
                         <div class="small-img-col">
-                            <img src="./static/images/gallery-1.jpg" width="100%">
+                            <img src="./static/images/gallery-1.jpg" width="100%" class="small-img">
                         </div>
                         <div class="small-img-col">
-                            <img src="./static/images/gallery-2.jpg" width="100%">
+                            <img src="./static/images/gallery-2.jpg" width="100%" class="small-img">
                         </div>
                         <div class="small-img-col">
-                            <img src="./static/images/gallery-3.jpg" width="100%">
+                            <img src="./static/images/gallery-3.jpg" width="100%" class="small-img">
                         </div>
                         <div class="small-img-col">
-                            <img src="./static/images/gallery-4.jpg" width="100%">
+                            <img src="./static/images/gallery-4.jpg" width="100%" class="small-img">
                         </div>
                     </div>
                </div>
@@ -60,16 +60,6 @@
     <!-- Featured -->
 
     <div class="small-container">
-        <div class="row row-2">
-            <h2>All Products</h2>
-            <select>
-                <option>Default Sorting</option>
-                <option>Sort by Price</option>
-                <option>Sort by Popularity</option>
-                <option>Sort by Rating</option>
-                <option>Sort by Scale</option>
-            </select>
-        </div>
         <div class="row">
             <div class="col-4">
                 <img src="./static/images/product-5.jpg">
@@ -130,6 +120,7 @@
     <!-- Footer -->
 
     <!-- Scripts -->
+       <!-- Burger Menu -->
     
        <script>
            var MenuItems = document.getElementById("MenuItems");
@@ -147,6 +138,34 @@
                }
            }
        </script>
+
+        <!-- Burger Menu -->
+
+        <!-- Product Gallery -->
+
+            <script>
+                var productImg = document.getElementById("productImg");
+                var smallImg = document.getElementsByClassName("small-img");
+
+                smallImg[0].onclick = function()
+                {
+                    productImg.src = smallImg[0].src;
+                }
+                smallImg[1].onclick = function()
+                {
+                    productImg.src = smallImg[1].src;
+                }
+                smallImg[2].onclick = function()
+                {
+                    productImg.src = smallImg[2].src;
+                }
+                smallImg[3].onclick = function()
+                {
+                    productImg.src = smallImg[3].src;
+                }
+            </script>
+
+       <!-- Product Gallery -->
 
     <!-- Scripts -->
 
