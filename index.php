@@ -1,4 +1,7 @@
-       
+    <!-- Config File -->
+    <?php require_once('config.php') ?>
+    <!-- Config File -->
+
     <!-- Header -->
         <?php include_once('./includes/header.php'); ?>
     <!-- Header -->
@@ -352,7 +355,7 @@
        </script>
 
        <!-- Burger Menu -->
-       
+
     <!-- Scripts -->
 
 </body>
