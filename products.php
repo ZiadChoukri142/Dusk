@@ -54,13 +54,6 @@ while ($row = mysqli_fetch_array($query)) {
                       <h4><?php
     echo "$name";
 ?></h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
                             <p>$<?php
     echo "$price";
 ?></p>
@@ -68,6 +61,7 @@ while ($row = mysqli_fetch_array($query)) {
                 <?php
 }
 ?>
+
        </div>
         <div class="page-btn">
             <span>1</span>
