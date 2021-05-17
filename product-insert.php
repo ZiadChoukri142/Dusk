@@ -1,5 +1,5 @@
 
-<?php include_once('./includes/functions.php'); ?>
+<?php include_once('./admin/includes/admin-functions.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -8,14 +8,6 @@
 </head>
 <body>
 <div id="content">
-  <?php
-    while ($row = @mysqli_fetch_array($result)) {
-      echo "<div id='img_div'>";
-      	echo "<img src='images/".$row['image']."' >";
-      	echo "<p>".$row['image_text']."</p>";
-      echo "</div>";
-    }
-  ?>
 <div class="container" style="margin:100px; display:flex; justify-content:center;">
   <form method="POST" action="product-insert.php" enctype="multipart/form-data">
 
