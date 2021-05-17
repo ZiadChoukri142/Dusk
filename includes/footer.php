@@ -11,7 +11,7 @@
     <p class="footer-company-name">Dusk &copy; 2021</p>
 </div>
 <div class="footer-center">
-    <img src="./static/images/brand.png">
+    <img src="../static/images/brand.png">
 </div>
 <div class="footer-right">
     <p class="footer-company-about">
