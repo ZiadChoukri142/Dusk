@@ -26,6 +26,7 @@
             </select>
         </div>
         <div class="row">
+            <a href="./product-details.php">
             <div class="col-4">
                 <img src="./static/images/product-1.jpg">
                 <h4>Red Printed T-Shirt</h4>
@@ -35,7 +36,8 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
-                </div>
+            </div>
+            </a>
                 <p>$50.00</p>
             </div>
             <div class="col-4">
