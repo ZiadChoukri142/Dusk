@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-a    <!-- Banner -->
+    <!-- Banner -->
 
         </div>
     </div>
@@ -62,10 +62,11 @@ a    <!-- Banner -->
     </div>
     <!-- Categories -->
 
-    <!-- Featured -->
+    <!-- Products -->
 
     <div class="small-container">
         <h2 class="title">Featured Products</h2>
+            <div class="row">
         <?php
                         $query= mysqli_query( $conn ,"SELECT * FROM products");
                         while($row=mysqli_fetch_array($query))
@@ -79,8 +80,8 @@ a    <!-- Banner -->
 
                 ?>
 
-                <div class="row">
-                    <div class="col-4">
+                
+                <div class="col-4">
                         <?php echo "<img src='../static/images/".$row['picture']."' >"; ?>
                         <h4><?php echo "$name";  ?></h4>
                             <div class="rating">
@@ -91,14 +92,15 @@ a    <!-- Banner -->
                                 <i class="far fa-star"></i>
                             </div>
                             <p>$<?php echo "$price";  ?></p>
-                    </div>
                 </div>
                 <?php } ?>
-        </div>
+            </div>
+    </div>
 
-        <!-- Featured -->
+    <!-- Products -->
 
-        <!-- Latest -->
+    <!-- Latest -->
+
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
@@ -113,10 +115,11 @@ a    <!-- Banner -->
                 </div>
                 <p>$50.00</p>
             </div>
+    <!-- Latest -->
+
         </div>
     </div>
 
-    <!-- Latest -->
 
     <!-- Exclusive Offer -->
 
