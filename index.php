@@ -1,22 +1,30 @@
-    <!-- Functions -->
-    <?php require_once('./includes/functions.php');?>
-    <!-- Functions -->
+   <!-- Functions -->
+   <?php
+require_once('./includes/functions.php');
+?>
+   <!-- Functions -->
 
     <!-- Config File -->
-    <?php require_once('config.php') ?>
-    <!-- Config File -->
+    <?php
+require_once('config.php');
+?>
+   <!-- Config File -->
 
     <!-- Header -->
-        <?php include_once('./includes/header.php'); ?>
-    <!-- Header -->
+        <?php
+include_once('./includes/header.php');
+?>
+   <!-- Header -->
 
 <body>
     <div class="header">
         <div class="container">
 
     <!-- Navbar -->
-        <?php include_once('./includes/navbar.php'); ?>
-    <!-- Navbar -->
+        <?php
+include_once('./includes/navbar.php');
+?>
+   <!-- Navbar -->
 
     <!-- Banner -->
 
@@ -68,22 +76,25 @@
         <h2 class="title">Featured Products</h2>
             <div class="row">
         <?php
-                        $query= mysqli_query( $conn ,"SELECT * FROM products");
-                        while($row=mysqli_fetch_array($query))
-                 {
-                    $id=$row['id'];
-                    $name=$row["name"];
-                    $price=$row["price"];
-                    $picture=$row["picture"];
-                    $description= substr($row["description"],0,200);
-                    $date=$row["created_at"];
-
-                ?>
+$query = mysqli_query($conn, "SELECT * FROM products");
+while ($row = mysqli_fetch_array($query)) {
+    $id          = $row['id'];
+    $name        = $row["name"];
+    $price       = $row["price"];
+    $picture     = $row["picture"];
+    $description = substr($row["description"], 0, 200);
+    $date        = $row["created_at"];
+    
+?>
 
                 
                 <div class="col-4">
-                        <?php echo "<img src='../static/images/".$row['picture']."' >"; ?>
-                        <h4><?php echo "$name";  ?></h4>
+                        <?php
+    echo "<img src='../static/images/" . $row['picture'] . "' >";
+?>
+                       <h4><?php
+    echo "$name";
+?></h4>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -91,32 +102,18 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
-                            <p>$<?php echo "$price";  ?></p>
+                            <p>$<?php
+    echo "$price";
+?></p>
                 </div>
-                <?php } ?>
-            </div>
+                <?php
+}
+?>
+           </div>
     </div>
 
     <!-- Products -->
-
-    <!-- Latest -->
-
-        <h2 class="title">Latest Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="./static/images/product-5.jpg">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-    <!-- Latest -->
-
+    
         </div>
     </div>
 
@@ -229,8 +226,10 @@
 
     <!-- Footer -->
   
-        <?php include_once('./includes/footer.php'); ?>
-    
+        <?php
+include_once('./includes/footer.php');
+?>
+   
     <!-- Footer -->
 
     <!-- Scripts -->
