@@ -12,7 +12,12 @@ include_once('./includes/header.php');
 
 <body>
         <div class="container">
+            <!-- Navbar -->
 
+            <?php
+include_once('./admin/includes/admin-navbar.php'); 
+?>
+            <!-- Navbar -->
 
         </div>
           <!-- Functions -->
