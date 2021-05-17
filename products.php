@@ -1,14 +1,22 @@
-       
+    <!-- Config File -->
+           <?php
+require_once('config.php');
+?>
+  <!-- Config File -->
     <!-- Header -->
-    <?php include_once('./includes/header.php'); ?>
-    <!-- Header -->
+    <?php
+include_once('./includes/header.php');
+?>
+   <!-- Header -->
 
 <body>
         <div class="container">
 
             <!-- Navbar -->
-                <?php include_once('./includes/navbar.php'); ?>
-            <!-- Navbar -->
+                <?php
+include_once('./includes/navbar.php');
+?>
+           <!-- Navbar -->
 
         </div>
 
@@ -26,57 +34,41 @@
             </select>
         </div>
         <div class="row">
-            <a href="./product-details.php">
-            <div class="col-4">
-                <img src="./static/images/product-1.jpg">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-            </div>
-            </a>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./static/images/product-2.jpg">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+        <?php
+$query = mysqli_query($conn, "SELECT * FROM products");
+while ($row = mysqli_fetch_array($query)) {
+    $id          = $row['id'];
+    $name        = $row["name"];
+    $price       = $row["price"];
+    $picture     = $row["picture"];
+    $description = substr($row["description"], 0, 200);
+    $date        = $row["created_at"];
+    
+?>
+
+                
+                <div class="col-4">
+                        <?php
+    echo "<img src='../static/images/" . $row['picture'] . "' >";
+?>
+                      <h4><?php
+    echo "$name";
+?></h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>$<?php
+    echo "$price";
+?></p>
                 </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./static/images/product-3.jpg">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./static/images/product-4.jpg">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-        </div>
+                <?php
+}
+?>
+       </div>
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
@@ -88,9 +80,11 @@
     <!-- Featured -->
 
     <!-- Footer -->
-       
-        <?php include_once('./includes/footer.php'); ?>
-    
+      
+        <?php
+include_once('./includes/footer.php');
+?>
+   
     <!-- Footer -->
 
     <!-- Scripts -->
