@@ -1,3 +1,7 @@
+    <!-- Functions -->
+    <?php require_once('./includes/functions.php');?>
+    <!-- Functions -->
+
     <!-- Config File -->
     <?php require_once('config.php') ?>
     <!-- Config File -->
