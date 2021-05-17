@@ -356,6 +356,24 @@ h1{
     flex-basis: 24%;
     cursor: pointer;
 }
+
+/* ------------ ADMIN ------------ */
+
+/* ------ DASHBOARD ------ */
+
+.fas,.far{
+    padding: 10px 0 10px 0;
+}
+
+i.fas.fa-edit{
+    color: darkgoldenrod;
+    padding: 10px;
+}
+
+i.fas.fa-trash{
+    color: darkred;
+    padding: 10px;
+}
 /* --
 ---- MEDIA QUERY ------ */
 
