@@ -16,6 +16,8 @@
     </div>
 
             <!-- Product Board -->
+            <div class="small-container">
+                <div class="row">
                 <?php
                         $query= mysqli_query( $conn ,"SELECT * FROM products");
                         while($row=mysqli_fetch_array($query))
@@ -30,7 +32,6 @@
 
                 ?>
 
-                <div class="row">
                     <div class="col-4">
                         <?php echo "<img src='../static/images/".$row['picture']."' >"; ?>
                         <h4><?php echo "$name";  ?></h4>
@@ -39,8 +40,10 @@
                         <a href=""><i class="fas fa-trash"></i></a>
                         <a href=""><i class="fas fa-edit"></i></a>
                     </div>
-                </div>
+                
                 <?php } ?>
+                </div>
+            </div>
             <!-- Product Board -->
 
 </body>
