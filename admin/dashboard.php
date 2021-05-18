@@ -7,13 +7,11 @@
     <!-- Header -->
 
 <body>
-    <div class="header">
         <div class="container">
             <!-- Navbar -->
             <?php include_once('./includes/admin-navbar.php'); ?>
             <!-- Navbar -->
         </div>
-    </div>
 
             <!-- Product Board -->
             <div class="small-container">
