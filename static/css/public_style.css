@@ -311,7 +311,7 @@ select:focus {
 
 /* ------------ PRODUCTS INSERT PAGE ------------ */
 
-.form-container {
+/* .form-container {
   display: flex;
   justify-content: center;
   margin: 100px;
@@ -322,9 +322,9 @@ select:focus {
     rgba(255, 255, 255, 1) 0%,
     rgba(80, 48, 64, 1) 250%
   );
-}
+} */
 
-.form-container form input,
+/* .form-container form input,
 label {
   width: 75%;
   margin-left: 50px;
@@ -368,7 +368,7 @@ label {
   background: white;
   padding: 35px 0 35px 0;
   margin: 0 35px 0 35px;
-}
+} */
 
 /* ------------ SINGLE PRODUCT PAGE ------------ */
 
@@ -427,66 +427,148 @@ h1 {
 
 /* ------------ CART ------------ */
 
-.cart-page{
+.cart-page {
   margin: 80px auto;
 }
 
-table{
+table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.cart-info{
+.cart-info {
   display: flex;
   flex-wrap: wrap;
 }
 
-th{
+th {
   text-align: left;
   padding: 5px;
-  color: #FFF;
+  color: #fff;
   background-color: #33174e;
   font-weight: normal;
 }
 
-td{
+td {
   padding: 10px 5px;
 }
 
-td input{
+td input {
   width: 40px;
   height: 30px;
   padding: 5px;
 }
 
-td a{
+td a {
   color: #33174e;
   font-size: 12px;
 }
 
-td img{
+td img {
   width: 80px;
   height: 80px;
   margin-right: 10px;
 }
 
-.total-price{
+.total-price {
   display: flex;
   justify-content: flex-end;
 }
 
-.total-price table{
+.total-price table {
   border-top: 3px solid #33174e;
   width: 100%;
   max-width: 400px;
 }
 
-td:last-child{
+td:last-child {
   text-align: right;
 }
 
-th:last-child{
+th:last-child {
   text-align: right;
+}
+
+/* ------------ ACCOUNT PAGE ------------ */
+
+.account-page {
+  padding: 50px 0;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(80, 48, 64, 1) 250%
+  );
+}
+
+.form-container{
+  background: #FFF;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-container span{
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+.form-btn{
+  display: inline-block;
+}
+
+.form-container form{
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+}
+
+form input{
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #CCC;
+}
+
+form .btn{
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+form .btn:focus{
+  outline: none;
+}
+
+#loginForm{
+  left: -300px;
+}
+
+#regForm{
+  left: 0;
+}
+
+form a{
+  font-size: 12px;
+}
+
+#indicator{
+  width: 100px;
+  border: none;
+  background: #33174e;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
 }
 
 /* ------------ ADMIN ------------ */
@@ -586,7 +668,7 @@ i.fas.fa-trash {
     margin: 0;
   }
 
-  .cart-info p{
+  .cart-info p {
     display: none;
   }
 }
