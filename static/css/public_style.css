@@ -510,6 +510,7 @@ th:last-child {
   padding: 20px 0;
   margin: auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .form-container span{
@@ -529,6 +530,7 @@ th:last-child {
   padding: 0 20px;
   position: absolute;
   top: 130px;
+  transition: transform 1s;
 }
 
 form input{
@@ -550,11 +552,11 @@ form .btn:focus{
   outline: none;
 }
 
-#loginForm{
+#LoginForm{
   left: -300px;
 }
 
-#regForm{
+#RegForm{
   left: 0;
 }
 
@@ -562,13 +564,14 @@ form a{
   font-size: 12px;
 }
 
-#indicator{
+#Indicator{
   width: 100px;
   border: none;
   background: #33174e;
   height: 3px;
   margin-top: 8px;
   transform: translateX(100px);
+  transition: transform 1s;
 }
 
 /* ------------ ADMIN ------------ */
@@ -620,16 +623,6 @@ i.fas.fa-trash {
     display: block;
     cursor: pointer;
   }
-
-  .form-container form {
-    margin: 0;
-    padding: 0;
-  }
-
-  .form-container {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 /* --- 600px --- */
@@ -657,15 +650,6 @@ i.fas.fa-trash {
     font-size: 26px;
     line-height: 22px;
     padding: 10px 0px 10px 0px;
-  }
-
-  .form-container form input,
-  label {
-    margin: 0;
-  }
-
-  .form-container .btn {
-    margin: 0;
   }
 
   .cart-info p {
