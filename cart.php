@@ -14,21 +14,19 @@
    ?>
 <!-- Header -->
 <body>
-   <div class="header">
       <div class="container">
    <!-- Navbar -->
    <?php
       include_once('./includes/navbar.php');
       ?>
       </div>
-   </div>
 
    <!-- Navbar -->
 
    <!-- Cart -->
 
          <!-- Items -->
-         
+
       <div class="small-container cart-page">
          <table>
             <tr>
