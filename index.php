@@ -1,25 +1,25 @@
 <!-- Functions -->
 <?php
-   require_once('./includes/functions.php');
-   ?>
+require_once ('./includes/functions.php');
+?>
 <!-- Functions -->
 <!-- Config File -->
 <?php
-   require_once('config.php');
-   ?>
+require_once ('config.php');
+?>
 <!-- Config File -->
 <!-- Header -->
 <?php
-   include_once('./includes/header.php');
-   ?>
+include_once ('./includes/header.php');
+?>
 <!-- Header -->
 <body>
    <div class="header">
       <div class="container">
          <!-- Navbar -->
          <?php
-            include_once('./includes/navbar.php');
-            ?>
+include_once ('./includes/navbar.php');
+?>
          <!-- Navbar -->
          <!-- Banner -->
          <div class="row">
@@ -47,21 +47,22 @@
       <div class="small-container">
          <div class="row">
             <?php
-               $query = mysqli_query($conn, "SELECT * FROM categories");
-               while ($row = mysqli_fetch_array($query)) {
-                  $id          = $row['id'];
-                  $name        = $row["name"];
-                  $category_picture     = $row["picture"];
-                  $date        = $row["created_at"];      
-               ?>
+$query = mysqli_query($conn, "SELECT * FROM categories");
+while ($row = mysqli_fetch_array($query))
+{
+    $id = $row['id'];
+    $name = $row["name"];
+    $category_picture = $row["picture"];
+    $date = $row["created_at"];
+?>
             <div class="col-3">
             <?php
-               echo "<img src='../static/images/" . $category_picture . "' >";
-               ?>            
+    echo "<img src='../static/images/" . $category_picture . "' >";
+?>            
             </div>
             <?php
 }
-         ?>
+?>
          </div>
       </div>
    </div>
@@ -72,23 +73,24 @@
       <h2 class="title">Featured Products</h2>
       <div class="row">
          <?php
-            $query = mysqli_query($conn, "SELECT * FROM products");
-            while ($row = mysqli_fetch_array($query)) {
-                $id          = $row['id'];
-                $name        = $row["name"];
-                $price       = $row["price"];
-                $picture     = $row["picture"];
-                $description = substr($row["description"], 0, 200);
-                $date        = $row["created_at"];
-                
-            ?>
+$query = mysqli_query($conn, "SELECT * FROM products");
+while ($row = mysqli_fetch_array($query))
+{
+    $id = $row['id'];
+    $name = $row["name"];
+    $price = $row["price"];
+    $picture = $row["picture"];
+    $description = substr($row["description"], 0, 200);
+    $date = $row["created_at"];
+
+?>
          <div class="col-4">
             <?php
-               echo "<img src='../static/images/" . $row['picture'] . "' >";
-               ?>
+    echo "<img src='../static/images/" . $row['picture'] . "' >";
+?>
             <h4><?php
-               echo "$name";
-               ?></h4>
+    echo "$name";
+?></h4>
             <div class="rating">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -97,12 +99,12 @@
                <i class="far fa-star"></i>
             </div>
             <p>$<?php
-               echo "$price";
-               ?></p>
+    echo "$price";
+?></p>
          </div>
          <?php
-            }
-            ?>
+}
+?>
       </div>
    </div>
    <!-- Products -->
@@ -208,8 +210,8 @@
    <!-- Brands -->
    <!-- Footer -->
    <?php
-      include_once('./includes/footer.php');
-      ?>
+include_once ('./includes/footer.php');
+?>
    <!-- Footer -->
    <!-- Scripts -->
    <!-- Burger Menu -->
