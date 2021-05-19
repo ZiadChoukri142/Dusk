@@ -21,62 +21,43 @@
       include_once('../admin/includes/admin-functions.php');
       ?>
    <!-- Functions -->
-   <div class="row row-2">
-      <h2>Add New Product</h2>
-   </div>
-   <div class="form-container">
-      <div class="row">
-         <div class="col-2">
-            <form method="POST" action="manage.php" enctype="multipart/form-data">
-               <!-- Name -->
-               <label>Name</label> <br>
-               <input type="text" name="name"> <br>
-               <!-- Price -->
-               <label>Price</label> <br>
-               <input type="text" name="price"> <br>
-               <!-- Description -->
-               <label>Description</label> <br>
-               <input type="text" name="description"> <br>
-               <!-- Category -->
-               <label>Category</label> <br>
-               <input type="text" name="category_id"> <br>
-               <!-- Picture -->
-               <label>Choose Product Image</label>
-               <input type="hidden" name="size" value="1000000"><br>
-               <input type="file" name="image"> <br>
-               <!-- Submit -->
-               <button type="submit" name="upload_product" class="btn">POST</button>
-            </form>
-         </div>
-         <div class="col-2">
-            <img src="../static/images/image1.png" />
-         </div>
-      </div>
-   </div>
-   <div class="row row-2">
-      <h2>Add New Category</h2>
-   </div>
-   <div class="form-container">
-      <div class="row">
-         <div class="col-2">
-            <form method="POST" action="manage.php">
-               <!-- Name -->
-               <label>Name</label> <br>
-               <input type="text" name="category_name"> <br>
-               <!-- Submit -->
-               <button type="submit" name="upload_category" class="btn">POST</button>
-            </form>
-         </div>
-         <div class="col-2">
-            <img src="../static/images/image1.png" />
+
+   <div class="account-page">
+         <div class="container">
+            <div class="row"> 
+               <div class="col-2">
+                  <div class="form-container">
+                     <div class="form-btn">
+                        <span onclick="login()">New Product</span>
+                        <span onclick="register()">New Category</span>
+                        <hr id="Indicator">
+                     </div>
+
+                     <form method="POST" action="product-insert.php" enctype="multipart/form-data" id="LoginForm">
+                        <input type="text" placeholder="Product Name" name="name">
+                        <input type="text" placeholder="Product Price" name="price">
+                        <input type="text" placeholder="Description" name="description">
+                        <input type="text" placeholder="Category" name="category_id">
+                        <input type="hidden" name="size" value="1000000"><br>
+                        <input type="file" name="image"> <br>
+                        <button type="submit" name="upload_product" class="btn">Post</button>
+                     </form>
+                     <form method="POST" action="product-insert.php" enctype="multipart/form-data" id="RegForm">
+                        <input type="text" placeholder="Category" name="category_name">
+                        <button type="submit" name="upload_category" class="btn">Post</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
-   </div>
+
    <!-- Footer -->
    <?php
       include_once('../includes/footer.php');
       ?>
    <!-- Footer -->
+
    <!-- Scripts -->
    <script>
       var MenuItems = document.getElementById("MenuItems");
@@ -94,5 +75,29 @@
           }
       }
    </script>
+
+   <!-- Form Toggle -->
+
+   <script>
+         var LoginForm = document.getElementById("LoginForm");
+         var RegForm = document.getElementById("RegForm");
+         var Indicator = document.getElementById("Indicator");
+
+            function register(){
+               RegForm.style.transform = "translateX(0px)";
+               LoginForm.style.transform = "translateX(0px)";
+               Indicator.style.transform = "translateX(100px)";
+            }
+
+            function login(){
+               RegForm.style.transform = "translateX(300px)";
+               LoginForm.style.transform = "translateX(300px)";
+               Indicator.style.transform = "translateX(0px)";
+            }
+
+      </script>
+
+   <!-- Form Toggle -->
+
    <!-- Scripts -->
 </body>
