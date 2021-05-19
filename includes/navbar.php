@@ -11,6 +11,6 @@
          <li><a href="">Account</a></li>
       </ul>
    </nav>
-   <img src="./static/images/cart.png" width="40px" />
+   <a href="../cart.php"><img src="./static/images/cart.png" width="40px" /></a>
    <img src="./static/images/menu.png" class="menu-icon" onclick="menutoggle()" />
 </div>
