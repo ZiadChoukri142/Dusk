@@ -5,7 +5,8 @@
    <nav>
       <ul id="MenuItems">
          <li><a href="../index.php" class="active">Home</a></li>
-         <li><a href="../product-insert.php">Manage</a></li>
+         <li><a href="../admin/product-insert.php">Manage</a></li>
+         <li><a href="../admin/dashboard.php">Dashboard</a></li>
       </ul>
    </nav>
    <img src="../static/images/cart.png" width="40px" />
