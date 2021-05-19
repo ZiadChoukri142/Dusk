@@ -22,10 +22,13 @@
       ?>
       </div>
    </div>
+
    <!-- Navbar -->
 
    <!-- Cart -->
 
+         <!-- Items -->
+         
       <div class="small-container cart-page">
          <table>
             <tr>
@@ -50,6 +53,10 @@
             </tr>
          </table>
 
+            <!-- Items -->
+
+            <!-- Total -->
+
          <div class="total-price">
             <table>
                <tr>
@@ -66,6 +73,9 @@
                </tr>
             </table>
          </div>
+
+            <!-- Total -->
+
 
       </div>
 
