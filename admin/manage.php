@@ -33,7 +33,7 @@
                         <hr id="Indicator">
                      </div>
 
-                     <form method="POST" action="product-insert.php" enctype="multipart/form-data" id="LoginForm">
+                     <form method="POST" action="manage.php" enctype="multipart/form-data" id="LoginForm">
                         <input type="text" placeholder="Product Name" name="name">
                         <input type="text" placeholder="Product Price" name="price">
                         <input type="text" placeholder="Description" name="description">
@@ -42,8 +42,10 @@
                         <input type="file" name="image"> <br>
                         <button type="submit" name="upload_product" class="btn">Post</button>
                      </form>
-                     <form method="POST" action="product-insert.php" enctype="multipart/form-data" id="RegForm">
+                     <form method="POST" action="manage.php" enctype="multipart/form-data" id="RegForm">
                         <input type="text" placeholder="Category" name="category_name">
+                        <input type="hidden" name="size" value="1000000"><br>
+                        <input type="file" name="category_image"><br>
                         <button type="submit" name="upload_category" class="btn">Post</button>
                      </form>
                   </div>
