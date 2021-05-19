@@ -22,8 +22,8 @@
       ?>
    <!-- Functions -->
    <div class="row row-2">
-                <h2>Add New Product</h2>
-    </div>
+      <h2>Add New Product</h2>
+   </div>
    <div class="form-container">
       <div class="row">
          <div class="col-2">
@@ -53,11 +53,9 @@
          </div>
       </div>
    </div>
-
-           <div class="row row-2">
-                <h2>Add New Category</h2>
-           </div>
-
+   <div class="row row-2">
+      <h2>Add New Category</h2>
+   </div>
    <div class="form-container">
       <div class="row">
          <div class="col-2">
