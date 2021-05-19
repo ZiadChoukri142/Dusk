@@ -32,17 +32,8 @@
   }
   $result = mysqli_query($db, "SELECT * FROM products");
 
-?>
-
-<?php
   // *** INSERT DATA ***
     // ** CATEGORY **
-    
-  // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "ecommerce_site");
-
-  // Initialize message variable
-  $msg = "";
 
     // submit button clicked
     if (isset($_POST['upload_category'])) {
@@ -52,12 +43,6 @@
   	$sql = "INSERT INTO categories (name) VALUES ('$category_name')";
   	// execute query
   	mysqli_query($db, $sql);
-
-    if(mysqli_query($db,$sql)) {
-  		$msg = "Product uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload Product";
-  	}
   }
   $result = mysqli_query($db, "SELECT * FROM categories");
 

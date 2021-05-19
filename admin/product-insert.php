@@ -1,24 +1,24 @@
 <!-- Config File -->
 <?php
-   require_once('config.php');
+   require_once('../config.php');
    ?>
 <!-- Config File -->
 <!-- Header -->
 <?php
-   include_once('./includes/header.php');
+   include_once('../includes/header.php');
    ?>
 <!-- Header -->
 <body>
    <div class="container">
       <!-- Navbar -->
       <?php
-         include_once('./admin/includes/admin-navbar.php'); 
+         include_once('../admin/includes/admin-navbar.php'); 
          ?>
       <!-- Navbar -->
    </div>
    <!-- Functions -->
    <?php
-      include_once('./admin/includes/admin-functions.php');
+      include_once('../admin/includes/admin-functions.php');
       ?>
    <!-- Functions -->
    <div class="row row-2">
@@ -49,7 +49,7 @@
             </form>
          </div>
          <div class="col-2">
-            <img src="./static/images/image1.png" />
+            <img src="../static/images/image1.png" />
          </div>
       </div>
    </div>
@@ -70,13 +70,13 @@
             </form>
          </div>
          <div class="col-2">
-            <img src="./static/images/image1.png" />
+            <img src="../static/images/image1.png" />
          </div>
       </div>
    </div>
    <!-- Footer -->
    <?php
-      include_once('./includes/footer.php');
+      include_once('../includes/footer.php');
       ?>
    <!-- Footer -->
    <!-- Scripts -->
