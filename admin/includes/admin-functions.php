@@ -18,7 +18,7 @@
      $category_id = $_POST['category_id'];
      
    	// image file directory
-   	$target = "./static/images/".basename($image);
+   	$target = "../static/images/".basename($image);
    
    	$sql = "INSERT INTO products (name,price,picture,description,category_id) VALUES ('$name','$price','$image','$description','$category_id')";
    	// execute query
