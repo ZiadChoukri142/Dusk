@@ -17,12 +17,12 @@
             $query= mysqli_query( $conn ,"SELECT * FROM products");
             while($row=mysqli_fetch_array($query))
             {
-            $id=$row['id'];
-            $name=$row["name"];
-            $price=$row["price"];
-            $picture=$row["picture"];
-            $description= substr($row["description"],0,200);
-            $date=$row["created_at"];
+            $id          = $row['id'];
+            $name        = $row["name"];
+            $price       = $row["price"];
+            $picture     = $row["picture"];
+            $description = substr($row["description"],0,200);
+            $date        = $row["created_at"];
             
             
             ?>
