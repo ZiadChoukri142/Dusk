@@ -49,6 +49,24 @@
                <td>$50.00</td>
             </tr>
          </table>
+
+         <div class="total-price">
+            <table>
+               <tr>
+                  <td>SubTotal</td>
+                  <td>$200.00</td>
+               </tr>
+               <tr>
+                  <td>Tax</td>
+                  <td>$35.00</td>
+               </tr>
+               <tr>
+               <td>Total</td>
+               <td>$235.00</td>
+               </tr>
+            </table>
+         </div>
+
       </div>
 
    <!-- Cart -->
