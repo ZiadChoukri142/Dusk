@@ -8,7 +8,7 @@
          <li><a href="../products.php">Products</a></li>
          <li><a href="">About</a></li>
          <li><a href="">Contact</a></li>
-         <li><a href="">Account</a></li>
+         <li><a href="../account.php">Account</a></li>
       </ul>
    </nav>
    <a href="../cart.php"><img src="./static/images/cart.png" width="40px" /></a>
