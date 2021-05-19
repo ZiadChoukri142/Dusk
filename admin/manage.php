@@ -27,7 +27,7 @@
    <div class="form-container">
       <div class="row">
          <div class="col-2">
-            <form method="POST" action="product-insert.php" enctype="multipart/form-data">
+            <form method="POST" action="manage.php" enctype="multipart/form-data">
                <!-- Name -->
                <label>Name</label> <br>
                <input type="text" name="name"> <br>
@@ -59,7 +59,7 @@
    <div class="form-container">
       <div class="row">
          <div class="col-2">
-            <form method="POST" action="product-insert.php">
+            <form method="POST" action="manage.php">
                <!-- Name -->
                <label>Name</label> <br>
                <input type="text" name="category_name"> <br>
