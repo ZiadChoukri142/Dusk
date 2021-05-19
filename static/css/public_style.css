@@ -425,6 +425,51 @@ h1 {
   cursor: pointer;
 }
 
+/* ------------ CART ------------ */
+
+.cart-page{
+  margin: 80px auto;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th{
+  text-align: left;
+  padding: 5px;
+  color: #FFF;
+  background-color: #33174e;
+  font-weight: normal;
+}
+
+td{
+  padding: 10px 5px;
+}
+
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a{
+  color: #33174e;
+  font-size: 12px;
+}
+
+td img{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
 /* ------------ ADMIN ------------ */
 
 /* ------ DASHBOARD ------ */
