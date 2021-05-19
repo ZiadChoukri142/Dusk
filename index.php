@@ -46,18 +46,26 @@
    <div class="categories">
       <div class="small-container">
          <div class="row">
+            <?php
+               $query = mysqli_query($conn, "SELECT * FROM categories");
+               while ($row = mysqli_fetch_array($query)) {
+                  $id          = $row['id'];
+                  $name        = $row["name"];
+                  $category_picture     = $row["picture"];
+                  $date        = $row["created_at"];      
+               ?>
             <div class="col-3">
-               <img src="./static/images/category-1.jpg" />
+            <?php
+               echo "<img src='../static/images/" . $category_picture . "' >";
+               ?>            
             </div>
-            <div class="col-3">
-               <img src="./static/images/category-2.jpg" />
-            </div>
-            <div class="col-3">
-               <img src="./static/images/category-3.jpg" />
-            </div>
+            <?php
+}
+         ?>
          </div>
       </div>
    </div>
+
    <!-- Categories -->
    <!-- Products -->
    <div class="small-container">
