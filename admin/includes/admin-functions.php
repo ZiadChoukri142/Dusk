@@ -1,49 +1,44 @@
+<?php require_once('../config.php') ?>
+<?php  
+
+// ********** ADD NEW PRODUCT **********
+
+if (isset($_POST['upload_product'])) {
+  
+    $name        = $_POST['name'];
+    $price       = $_POST['price'];
+    $description = $_POST['description'];
+    $filename    = $_FILES["image"]["name"];
+    $tempname    = $_FILES["image"]["tmp_name"];    
+    $folder      = "../static/images/".$filename;
+          
+    $conn = mysqli_connect("localhost", "root", "", "ecommerce_site");
+  
+        $sql = "INSERT INTO products (name,price,picture,description) VALUES ('$name', '$price','$filename', '$description')";
+  
+        mysqli_query($conn, $sql);
+
+  }
+  $result = mysqli_query($conn, "SELECT * FROM products");
+?>
+
 <?php
-   // *** INSERT DATA ***
-     // ** PRODUCT **
-   
-   // Create database connection
-   $db = mysqli_connect("localhost", "root", "", "ecommerce_site");
-   
-   // Initialize message variable
-   $msg = "";
-   
-     // submit button clicked
-     if (isset($_POST['upload_product'])) {
-   	// get data names
-     $name = $_POST['name'];
-     $price = $_POST['price'];
-     $image = $_FILES['image']['name'];
-     $description = $_POST['description'];
-     $category_id = $_POST['category_id'];
-     
-   	// image file directory
-   	$target = "../static/images/".basename($image);
-   
-   	$sql = "INSERT INTO products (name,price,picture,description,category_id) VALUES ('$name','$price','$image','$description','$category_id')";
-   	// execute query
-   	mysqli_query($db, $sql);
-   
-   	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-   		$msg = "Product uploaded successfully";
-   	}else{
-   		$msg = "Failed to upload Product";
-   	}
-   }
-   $result = mysqli_query($db, "SELECT * FROM products");
-   
-   // *** INSERT DATA ***
-     // ** CATEGORY **
-   
-     // submit button clicked
-     if (isset($_POST['upload_category'])) {
-   	// get data names
-     $category_name = $_POST['category_name'];
-   
-   	$sql = "INSERT INTO categories (name) VALUES ('$category_name')";
-   	// execute query
-   	mysqli_query($db, $sql);
-   }
-   $result = mysqli_query($db, "SELECT * FROM categories");
-   
-   ?>
+
+// ********** ADD NEW CATEGORY **********
+
+  if (isset($_POST['upload_category'])) {
+
+    $name        = $_POST['category_name'];
+    $filename    = $_FILES["category_image"]["name"];
+    $tempname    = $_FILES["category_image"]["tmp_name"];    
+    $folder      = "../static/images/".$filename;
+          
+        $conn = mysqli_connect("localhost", "root", "", "ecommerce_site");
+      
+        $sql = "INSERT INTO categories (name,picture) VALUES ('$name','$filename')";
+  
+        mysqli_query($conn, $sql);
+      
+  }
+  $result = mysqli_query($conn, "SELECT * FROM categories");
+?>
