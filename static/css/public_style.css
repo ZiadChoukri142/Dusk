@@ -470,6 +470,25 @@ td img{
   margin-right: 10px;
 }
 
+.total-price{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table{
+  border-top: 3px solid #33174e;
+  width: 100%;
+  max-width: 400px;
+}
+
+td:last-child{
+  text-align: right;
+}
+
+th:last-child{
+  text-align: right;
+}
+
 /* ------------ ADMIN ------------ */
 
 /* ------ DASHBOARD ------ */
@@ -565,6 +584,10 @@ i.fas.fa-trash {
 
   .form-container .btn {
     margin: 0;
+  }
+
+  .cart-info p{
+    display: none;
   }
 }
 
