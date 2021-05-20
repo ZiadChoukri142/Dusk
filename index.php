@@ -45,6 +45,7 @@ include_once ('./includes/navbar.php');
    <!-- Categories -->
    <div class="categories">
       <div class="small-container">
+      <h2 class="title">Categories</h2>
          <div class="row">
             <?php
 $query = mysqli_query($conn, "SELECT * FROM categories");
