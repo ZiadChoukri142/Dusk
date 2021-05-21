@@ -22,6 +22,6 @@ My first attempt of making a fully functional e-commerce website with the skills
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@choukri_ziad](https://twitter.com/@choukri_ziad) - ziad.choukrii@gmail.com
+Ziad Choukri - [@choukri_ziad](https://twitter.com/@choukri_ziad) - ziad.choukrii@gmail.com
 
 Project Link: [https://github.com/ZiadChoukri142/ecommerce_site](https://github.com/ZiadChoukri142/ecommerce_site)
