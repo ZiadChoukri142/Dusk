@@ -14,9 +14,9 @@ My first attempt of making a fully functional e-commerce website with the skills
 
 ### Built With
 
-* [PHP]()
-* [HTML/CSS]()
-* [JAVASCRIPT]()
+* [PHP]
+* [HTML/CSS]
+* [JAVASCRIPT]
 
 
 <!-- CONTACT -->
