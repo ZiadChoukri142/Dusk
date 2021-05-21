@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_array($query))
             <p>$<?php echo "$price"; ?></p>
             <p><?php echo "$description"; ?></p>
             <a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a>
-            <a href=""><i class="fas fa-edit"></i></a>
+            <a href="edit.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a>
          </div>
          <?php
 } ?>
@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_array($query))
             <?php echo "<img src='../static/images/" . $category_picture . "' >"; ?>
             <h4><?php echo "$name"; ?></h4>
             <a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a>
-            <a href=""><i class="fas fa-edit"></i></a>
+            <a href="edit.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-edit"></i></a>
          </div>
          <?php
 } ?>
