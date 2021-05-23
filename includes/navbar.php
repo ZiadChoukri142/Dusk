@@ -1,6 +1,6 @@
 <div class="navbar">
    <div class="logo">
-      <img src="./static/images/brand.png" width="130px" />
+      <a href="../index.php"><img src="./static/images/brand.png" width="130px" /></a>
    </div>
    <nav>
       <ul id="MenuItems">
