@@ -1,6 +1,12 @@
 <!-- Header -->
 <?php include_once('./includes/header.php'); ?>
 <!-- Header -->
+   
+<!-- Config File -->
+<?php
+require_once ('config.php');
+?>
+<!-- Config File -->
 <body>
    <div class="container">
       <!-- Navbar -->
@@ -10,8 +16,23 @@
    <!-- Single Product Details -->
    <div class="small-container single-product">
       <div class="row">
+      <?php
+      $product_id = $_REQUEST['id'];
+    $query = mysqli_query($conn, "SELECT * FROM products WHERE id='$product_id'");
+    $row = mysqli_fetch_array($query);
+    $id = $row['id'];
+    $name = $row["name"];
+    $price = $row["price"];
+    $picture = $row["picture"];
+    $description = substr($row["description"], 0, 200);
+    $category = $row["category"];
+    $date = $row["created_at"];
+
+?>
          <div class="col-2">
-            <img src="./static/images/gallery-1.jpg" width="100%" id="productImg">
+            <?php
+            echo "<img src='../static/images/" . $row['picture'] . "' width='100%' id='productImg'>";
+            ?>
             <div class="small-img-row">
                <div class="small-img-col">
                   <img src="./static/images/gallery-1.jpg" width="100%" class="small-img">
@@ -28,9 +49,9 @@
             </div>
          </div>
          <div class="col-2">
-            <p>Home / T-Shirt</p>
-            <h1>Red Printed T-Shirt by HRX</h1>
-            <h4>$50.00</h4>
+            <p>Home / <?php echo "$category";?></p>
+            <h1><?php echo "$name";?></h1>
+            <h4>$<?php echo "$price";?></h4>
             <select>
                <option>Select Size</option>
                <option>XXL</option>
@@ -42,9 +63,7 @@
             <input type="number" value="1" min="1">
             <a href="" class="btn">Add To Cart</a>
             <h3>Product Details<i class="fa fa-indent"></i></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sit hic ad minimafugit iure at,
-               nesciunt fuga necessitatibus, vel mollitia, dolore quod laudantium quisquam?
-            </p>
+            <p><?php echo "$description";?></p>
          </div>
       </div>
    </div>
@@ -68,42 +87,6 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
-               <i class="far fa-star"></i>
-            </div>
-            <p>$50.00</p>
-         </div>
-         <div class="col-4">
-            <img src="./static/images/product-6.jpg">
-            <h4>Red Printed T-Shirt</h4>
-            <div class="rating">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="far fa-star"></i>
-            </div>
-            <p>$50.00</p>
-         </div>
-         <div class="col-4">
-            <img src="./static/images/product-7.jpg">
-            <h4>Red Printed T-Shirt</h4>
-            <div class="rating">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="far fa-star"></i>
-            </div>
-            <p>$50.00</p>
-         </div>
-         <div class="col-4">
-            <img src="./static/images/product-8.jpg">
-            <h4>Red Printed T-Shirt</h4>
-            <div class="rating">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
                <i class="far fa-star"></i>
             </div>
             <p>$50.00</p>
