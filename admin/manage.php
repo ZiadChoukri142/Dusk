@@ -37,9 +37,18 @@
                         <input type="text" placeholder="Product Name" name="name">
                         <input type="text" placeholder="Product Price" name="price">
                         <input type="text" placeholder="Description" name="description">
-                        <input type="text" placeholder="Category" name="category_id">
+                        <select name="category" style="  width: 100%;">
+                        <?php
+                           $query = mysqli_query($conn, "SELECT * FROM categories");
+                           while ($row = mysqli_fetch_array($query))
+                           {
+                              $name = $row["name"];
+                           ?>
+                           <option><?php echo "$name";?></option>
+                           <?php } ?>
+                        </select>
                         <input type="hidden" name="size" value="1000000"><br>
-                        <input type="file" name="image"> <br>
+                        <input type="file" name="image[]" multiple> <br>
                         <button type="submit" name="upload_product" class="btn">Post</button>
                      </form>
                      <form method="POST" action="manage.php" enctype="multipart/form-data" id="RegForm">
