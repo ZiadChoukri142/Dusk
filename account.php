@@ -35,17 +35,17 @@
                      <span onclick="register()">Register</span>
                      <hr id="Indicator">
                   </div>
-                  <form id="LoginForm">
-                     <input type="text" placeholder="Username">
-                     <input type="password" placeholder="Password">
-                     <button type="submit" class="btn">Login</button>
+                  <form id="LoginForm" method="POST" action="login.php">
+                     <input type="text" placeholder="Username" name="username" required>
+                     <input type="password" placeholder="Password" name="password" required>
+                     <button type="submit" class="btn" name="login">Login</button>
                      <a href="">Forgot Password</a>
                   </form>
-                  <form id="RegForm">
-                     <input type="text" placeholder="Username">
-                     <input type="email" placeholder="Email">
-                     <input type="password" placeholder="Password">
-                     <button type="submit" class="btn">Register</button>
+                  <form id="RegForm" method="POST" action="register.php">
+                     <input type="text" placeholder="Username" name="username" required>
+                     <input type="email" placeholder="Email" name="email" required>
+                     <input type="password" placeholder="Password" name="password" minlength="8" maxlength="24" required>
+                     <button type="submit" class="btn" name="register">Register</button>
                   </form>
                </div>
             </div>
