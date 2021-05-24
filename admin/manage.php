@@ -34,10 +34,10 @@
                      </div>
 
                      <form method="POST" action="manage.php" enctype="multipart/form-data" id="LoginForm">
-                        <input type="text" placeholder="Product Name" name="name">
-                        <input type="text" placeholder="Product Price" name="price">
-                        <input type="text" placeholder="Description" name="description">
-                        <select name="category" style="  width: 100%;">
+                        <input type="text" placeholder="Product Name" name="name" required>
+                        <input type="text" placeholder="Product Price" name="price" required>
+                        <input type="text" placeholder="Description" name="description" required>
+                        <select name="category" style="  width: 100%;" name="category" required>
                         <?php
                            $query = mysqli_query($conn, "SELECT * FROM categories");
                            while ($row = mysqli_fetch_array($query))
@@ -48,7 +48,7 @@
                            <?php } ?>
                         </select>
                         <input type="hidden" name="size" value="1000000"><br>
-                        <input type="file" name="image[]" multiple> <br>
+                        <input type="file" name="image" required> <br>
                         <button type="submit" name="upload_product" class="btn">Post</button>
                      </form>
                      <form method="POST" action="manage.php" enctype="multipart/form-data" id="RegForm">
