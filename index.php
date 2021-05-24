@@ -1,26 +1,57 @@
-<!-- Functions -->
-<?php
-require_once ('./includes/functions.php');
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
 ?>
 <!-- Functions -->
+<!-- Functions -->
+
 <!-- Config File -->
-<?php
-require_once ('config.php');
-?>
+<?php include ('config.php'); ?>
+
 <!-- Config File -->
 <!-- Header -->
-<?php
-include_once ('./includes/header.php');
-?>
+<?php include ('./includes/header.php'); ?>
+
 <!-- Header -->
 <body>
    <div class="header">
       <div class="container">
          <!-- Navbar -->
-         <?php
-include_once ('./includes/navbar.php');
-?>
+         <?php include('./includes/navbar.php'); ?>
+
          <!-- Navbar -->
+
+         <!-- Logged in -->
+            <div class="content">
+        <!-- notification message -->
+        <?php if (isset($_SESSION['success'])) : ?>
+        <div class="error success" >
+            <h3>
+            <?php 
+                echo $_SESSION['success']; 
+                unset($_SESSION['success']);
+            ?>
+            </h3>
+        </div>
+        <?php endif ?>
+
+        <!-- logged in user information -->
+        <?php  if (isset($_SESSION['username'])) : ?>
+            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+            <p> <a href="index.php?logout='1'"><img src="../static/images/logout.png" width="75px"></a> </p>
+        <?php endif ?>
+    </div>
+	    <!-- Logged in -->
+
          <!-- Banner -->
          <div class="row">
             <div class="col-2">
@@ -36,14 +67,15 @@ include_once ('./includes/navbar.php');
                <a href="" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col-2">
-               <img src="./static/images/image1.png" />
+               <img src="../static/images/image1.png" />
             </div>
          </div>
          <!-- Banner -->
       </div>
-   </div>
-   <!-- Categories -->
-   <div class="categories">
+   </div>	
+
+      <!-- Categories -->
+      <div class="categories">
       <div class="small-container">
       <h2 class="title">Categories</h2>
          <div class="row">
@@ -85,23 +117,18 @@ while ($row = mysqli_fetch_array($query))
     $date = $row["created_at"];
 
 ?>
-         <div class="col-4">
+         <div class="col-4"><a href="product-details.php?id=<?php echo $id;?>">
             <?php
     echo "<img src='../static/images/" . $row['picture'] . "' >";
 ?>
+</a>
             <h4><?php
     echo "$name";
 ?></h4>
-            <div class="rating">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="far fa-star"></i>
-            </div>
             <p>$<?php
     echo "$price";
 ?></p>
+         <a href="" class="btn" style="display: flex; justify-content: center;">Add To cart</a>
          </div>
          <?php
 }
