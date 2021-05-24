@@ -1,3 +1,16 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
 <!-- Config File -->
 <?php
    require_once('config.php');
@@ -32,24 +45,20 @@
          <?php
             $query = mysqli_query($conn, "SELECT * FROM products");
             while ($row = mysqli_fetch_array($query)) {
-                $id          = $row['id'];
-                $name        = $row["name"];
-                $price       = $row["price"];
-                $picture     = $row["picture"];
-                $description = substr($row["description"], 0, 200);
-                $date        = $row["created_at"];
                 
             ?>
          <div class="col-4">
-            <?php
-               echo "<img src='../static/images/" . $row['picture'] . "' >";
-               ?>
-            <h4><?php
-               echo "$name";
-               ?></h4>
-            <p>$<?php
-               echo "$price";
-               ?></p>
+            <from method="GET" action="products.php?id=<?php echo $row['id'] ?>">
+               <a href="product-details.php?id=<?php echo $row['id'] ?>">
+                  <img src="./static/images/<?= $row['picture'] ?>">
+               </a>
+               <h4><?= $row['name']?></h4>
+               <?= $row['description']?> <br>
+               <p>$<?= number_format($row['price'], 2)?></p>
+               <input type="hidden" name="name" value="<?= $row['name'] ?>">
+               <input type="hidden" name="price" value="<?= $row['price']  ?>">
+               <input type="submit" method="post" class="btn" name="add_to_cart" value="Add To Cart">
+            </form>
          </div>
          <?php
             }
