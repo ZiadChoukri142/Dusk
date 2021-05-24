@@ -1,3 +1,16 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
 <!-- Header -->
 <?php include_once('./includes/header.php'); ?>
 <!-- Header -->
@@ -33,20 +46,6 @@ require_once ('config.php');
             <?php
             echo "<img src='../static/images/" . $row['picture'] . "' width='100%' id='productImg'>";
             ?>
-            <div class="small-img-row">
-               <div class="small-img-col">
-                  <img src="./static/images/gallery-1.jpg" width="100%" class="small-img">
-               </div>
-               <div class="small-img-col">
-                  <img src="./static/images/gallery-2.jpg" width="100%" class="small-img">
-               </div>
-               <div class="small-img-col">
-                  <img src="./static/images/gallery-3.jpg" width="100%" class="small-img">
-               </div>
-               <div class="small-img-col">
-                  <img src="./static/images/gallery-4.jpg" width="100%" class="small-img">
-               </div>
-            </div>
          </div>
          <div class="col-2">
             <p>Home / <?php echo "$category";?></p>
