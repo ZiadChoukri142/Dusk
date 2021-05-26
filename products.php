@@ -57,7 +57,7 @@
                <p>$<?= number_format($row['price'], 2)?></p>
                <input type="hidden" name="name" value="<?= $row['name'] ?>">
                <input type="hidden" name="price" value="<?= $row['price']  ?>">
-               <input type="submit" method="post" class="btn" name="add_to_cart" value="Add To Cart">
+               <a href="../product-details.php"><input type="submit" method="post" class="btn" name="add_to_cart" value="Order"></a>
             </form>
          </div>
          <?php
