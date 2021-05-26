@@ -37,7 +37,7 @@
                         <input type="text" placeholder="Product Name" name="name" required>
                         <input type="text" placeholder="Product Price" name="price" required>
                         <input type="text" placeholder="Description" name="description" required>
-                        <select name="category" style="  width: 100%;" name="category" required>
+                        <select style="width: 100%;" name="category" required>
                         <?php
                            $query = mysqli_query($conn, "SELECT * FROM categories");
                            while ($row = mysqli_fetch_array($query))
