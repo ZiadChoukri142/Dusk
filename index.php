@@ -64,7 +64,7 @@
                   Consistent <br />
                   hard work gains success. Greatness will come.
                </p>
-               <a href="" class="btn">Explore Now &#8594;</a>
+               <a href="../products.php" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col-2">
                <img src="../static/images/image1.png" />
@@ -128,7 +128,7 @@ while ($row = mysqli_fetch_array($query))
             <p>$<?php
     echo "$price";
 ?></p>
-         <a href="" class="btn" style="display: flex; justify-content: center;">Add To cart</a>
+         <a href="../cart.php" class="btn" style="display: flex; justify-content: center;">Add To cart</a>
          </div>
          <?php
 }
@@ -161,54 +161,28 @@ while ($row = mysqli_fetch_array($query))
    <div class="testimonial">
       <div class="small-container">
          <div class="row">
+                     <?php
+            $query = mysqli_query($conn, "SELECT * FROM contact");
+            while ($row = mysqli_fetch_array($query))
+            {
+               $username = $row["username"];
+               $useremail = $row["email"];
+               $message = $row["msg"];
+               $user_pfp = $row["profile_picture"];
+               $date = $row["created_at"];
+
+            ?>
             <div class="col-3">
                <i class="fas fa-quote-left"></i>
                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  <?php echo "$message";  ?>
                </p>
-               <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-               </div>
-               <img src="./static/images/user-1.png">
-               <h3>Jackie James</h3>
+               <?php echo "<img src='../static/images/" . $row['profile_picture'] . "' >";?>
+               <h3>  <?php echo "$username";  ?></h3>
             </div>
-            <div class="col-3">
-               <i class="fas fa-quote-left"></i>
-               <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-               </p>
-               <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-               </div>
-               <img src="./static/images/user-2.png">
-               <h3>Charlie Doe</h3>
-            </div>
-            <div class="col-3">
-               <i class="fas fa-quote-left"></i>
-               <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-               </p>
-               <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-               </div>
-               <img src="./static/images/user-3.png">
-               <h3>Maria Saint</h3>
-            </div>
+            <?php
+}
+?>
          </div>
       </div>
    </div>
