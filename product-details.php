@@ -30,7 +30,7 @@ require_once ('config.php');
    <div class="small-container single-product">
       <div class="row">
       <?php
-      $product_id = $_REQUEST['id'];
+      $product_id = $_GET['id'];
     $query = mysqli_query($conn, "SELECT * FROM products WHERE id='$product_id'");
     $row = mysqli_fetch_array($query);
     $id = $row['id'];
@@ -51,16 +51,7 @@ require_once ('config.php');
             <p>Home / <?php echo "$category";?></p>
             <h1><?php echo "$name";?></h1>
             <h4>$<?php echo "$price";?></h4>
-            <select>
-               <option>Select Size</option>
-               <option>XXL</option>
-               <option>XL</option>
-               <option>Large</option>
-               <option>Medium</option>
-               <option>Small</option>
-            </select>
-            <input type="number" value="1" min="1">
-            <a href="" class="btn">Add To Cart</a>
+            <a href="../cart.php" class="btn">Add To Cart</a>
             <h3>Product Details<i class="fa fa-indent"></i></h3>
             <p><?php echo "$description";?></p>
          </div>
@@ -70,29 +61,37 @@ require_once ('config.php');
    <!-- Title -->
    <div class="small-container">
       <div class="row row-2">
-         <h2>Related Products</h2>
-         <p>View More</p>
+         <h2>More Products</h2>
       </div>
    </div>
    <!-- Title -->
-   <!-- Related Products -->
+   <!-- See More -->
    <div class="small-container">
       <div class="row">
+         <?php
+            $query = mysqli_query($conn, "SELECT * FROM products");
+            while ($row = mysqli_fetch_array($query)) {
+                
+            ?>
          <div class="col-4">
-            <img src="./static/images/product-5.jpg">
-            <h4>Red Printed T-Shirt</h4>
-            <div class="rating">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="far fa-star"></i>
-            </div>
-            <p>$50.00</p>
-         </div>
+            <from method="GET" action="products.php?id=<?php echo $row['id'] ?>">
+               <a href="product-details.php?id=<?php echo $row['id'] ?>">
+                  <img src="./static/images/<?= $row['picture'] ?>">
+               </a>
+               <h4><?= $row['name']?></h4>
+               <?= $row['description']?> <br>
+               <p>$<?= number_format($row['price'], 2)?></p>
+               <input type="hidden" name="name" value="<?= $row['name'] ?>">
+               <input type="hidden" name="price" value="<?= $row['price']  ?>">
+            </form>
       </div>
+
+         <?php
+            }
+            ?>   
    </div>
-   <!-- Related Products -->
+</div>
+   <!-- See More -->
    <!-- Footer -->
    <?php include_once('./includes/footer.php'); ?>
    <!-- Footer -->
