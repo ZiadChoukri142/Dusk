@@ -9,6 +9,5 @@
          <li><a href="../admin/dashboard.php">Dashboard</a></li>
       </ul>
    </nav>
-   <img src="../static/images/cart.png" width="40px" />
    <img src="../static/images/menu.png" class="menu-icon" onclick="menutoggle()" />
 </div>
