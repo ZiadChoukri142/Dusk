@@ -1,10 +1,7 @@
 <?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<?php include ('./includes/header.php'); ?>
 <body>
 	   <style>
    * {
@@ -91,7 +88,7 @@ form, .content {
   		<input type="password" name="password">
   	</div>
   	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
+  		<button type="submit" class="btn" name="login_user" style="width: 35%;">Login</button>
   	</div>
   	<p>
   		Not yet a member? <a href="register.php">Sign up</a>
