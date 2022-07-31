@@ -10,7 +10,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-My first attempt of making a fully functional e-commerce website with the skills I developed over 6 months :)
+My first attempt of making a fully functional e-commerce website with the skills I developed over 6 months.
 
 ### Built With
 
